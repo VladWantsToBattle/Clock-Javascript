@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Clock</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<link rel="icon" href="clock.ico" />
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 bg-secondary p-2 mt-5 rounded">
+				<div class="bg-light rounded mt-3 ml-3 mr-3">
+					<p class="display-4 text-dark text-center" id="pClock"
+						style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		let clock = document.getElementById('pClock');
+
+		setInterval(function () {
+			let date = new Date();
+			clock.innerHTML = date.toLocaleTimeString();
+		}, 1000);
+	</script>
+</body>
+
+</html>
